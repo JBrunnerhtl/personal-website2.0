@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    /* 🌤 Light Theme */
+    --border-colors-about: rgb(86, 120, 200);
+    --text-color-about: rgb(60, 80, 150);
+    --gradient-color: linear-gradient(135deg, #7ba6e0, #6f8fe0, #8b7de0);
+    --background-gradient: linear-gradient(
+            -45deg,
+            #d8e3f7,
+            #c8d5f0,
+            #b9c7eb,
+            #aebde6,
+            #a0b0e0
+    );
+
+}
+
+.dark {
+    --border-colors-about: rgb(128, 90, 213);
+    --text-color-about: rgb(153, 122, 255);
+    --gradient-color: linear-gradient(135deg, #805ad5, #5a67d8, #4986d5);
+    --background-gradient: linear-gradient(
+            -45deg,
+            #000000,
+            #070b14,
+            #10172a,
+            #1a2140,
+            #2a3b64,
+            #563b91
+    );
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    height: auto;
+    color: var(--text-color-about);
+    overflow-x: hidden;
+
+    overscroll-behavior-x: none;
+    overscroll-behavior-y: auto;
+
+    scroll-behavior: smooth;
+    background: var(--background-gradient);
+    color-scheme: dark;
+
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+
+
+    transition: background 0.8s ease, color 0.8s ease;
+}
+
+
+#vanta-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    background: var(--background-gradient);
+    background-size: 400% 400%;
+    animation: gradientShift 22s ease-in-out infinite;
+    transition: background 1s ease-in-out;
+    will-change: background-position;
+}
+
+
+#vanta-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+            circle at 30% 40%,
+            rgba(120, 90, 200, 0.12),
+            transparent 75%
+    );
+    animation: glowDrift 14s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+#vanta-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+            circle at 70% 60%,
+            rgba(255, 255, 255, 0.04),
+            transparent 80%
+    );
+    animation: lightDrift 16s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+
+.content {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    background: transparent;
+}
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes glowDrift {
+    0% {
+        transform: translate(-3%, -2%) scale(1);
+        opacity: 0.25;
+    }
+    50% {
+        transform: translate(3%, 3%) scale(1.05);
+        opacity: 0.35;
+    }
+    100% {
+        transform: translate(-2%, 1%) scale(1);
+        opacity: 0.25;
+    }
+}
+
+@keyframes lightDrift {
+    0% {
+        transform: translate(0%, 0%) scale(1);
+    }
+    50% {
+        transform: translate(2%, -2%) scale(1.05);
+    }
+    100% {
+        transform: translate(0%, 0%) scale(1);
+    }
+}
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

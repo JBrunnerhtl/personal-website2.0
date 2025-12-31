@@ -1,0 +1,51 @@
+/* ===== Base Styling ===== */
+.baseStyle {
+    min-height: 13rem;
+    opacity: 0; /* wird von Framer Motion animiert */
+    will-change: transform, opacity;
+    transform: translateZ(0); /* GPU Hint */
+    backface-visibility: hidden;
+    perspective: 1000px;
+    transition: box-shadow 0.4s ease-in-out;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+
+.baseStyle:hover {
+    box-shadow:
+            0 0 20px rgba(73, 134, 213, 0.3),
+            0 0 40px rgba(90, 103, 216, 0.2),
+            0 0 60px rgba(128, 90, 213, 0.2);
+    transition: box-shadow 0.4s ease-in-out, transform 0.3s ease;
+    transform: translateY(-4px);
+}
+
+/* ==== LIGHT MODE ==== */
+.baseStyleDark:hover {
+    box-shadow:
+            0 0 12px rgba(73, 134, 213, 0.25),
+            0 0 24px rgba(90, 103, 216, 0.15),
+            0 0 36px rgba(80, 90, 160, 0.1);
+    transition: box-shadow 0.4s ease-in-out, transform 0.3s ease;
+    transform: translateY(-4px);
+}
+
+/* Text Gradient */
+.colorTheme {
+    background: linear-gradient(135deg, #4986d5, #5a67d8, #805ad5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Responsives Layout */
+@media (max-width: 640px) {
+    .baseStyle {
+        margin-left: 1rem !important;
+        margin-right: 1rem !important;
+        min-height: 13rem;
+    }
+}
+
+/* Alte manuelle Animationen entfernt!
+   Framer Motion übernimmt jetzt alles */

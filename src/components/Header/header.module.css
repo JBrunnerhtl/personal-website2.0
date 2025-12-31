@@ -1,0 +1,10 @@
+h1.headerStylingWithGradient {
+    background: linear-gradient(135deg, #4986d5, #5a67d8, #805ad5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    display: inline-block;
+    text-align: center;
+    will-change: transform, opacity, filter;
+    transition: text-shadow 0.3s ease, transform 0.3s ease;
+}

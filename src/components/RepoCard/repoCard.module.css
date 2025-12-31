@@ -1,0 +1,45 @@
+
+.baseStyle {
+    opacity: 0; /* wird von Framer Motion animiert */
+    margin: 2rem !important;
+    will-change: transform, opacity;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    perspective: 1200px;
+    transition: box-shadow 0.36s ease, transform 0.36s ease;
+    border-radius: 1rem;
+
+    backdrop-filter: blur(6px);
+}
+
+
+.baseStyle:hover {
+    color: var(--text-color-about);
+    box-shadow:
+            0 0 20px rgba(73, 134, 213, 0.32),
+            0 0 40px rgba(90, 103, 216, 0.22),
+            0 0 60px rgba(128, 90, 213, 0.18);
+    transform: translateY(-4px) scale(1.02);
+    transition: box-shadow 0.36s ease, transform 0.36s ease;
+}
+
+
+@media (max-width: 768px) {
+    .baseStyle {
+        min-width: 20rem;
+        margin: 1.5rem !important;
+    }
+}
+
+
+.baseStyleForHeader {
+    background: linear-gradient(135deg, #4986d5, #5a67d8, #805ad5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.baseStyleLink {
+    text-decoration: none;
+    color: white;
+}

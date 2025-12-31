@@ -1,0 +1,39 @@
+.baseStyle {
+    min-height: 23rem;
+    display: inline-flex;
+    max-width: 15rem;
+    opacity: 0;
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    transition: box-shadow 0.4s ease-in-out;
+}
+
+.baseStyle:hover {
+    box-shadow:
+            0 0 20px rgba(73, 134, 213, 0.3),
+            0 0 40px rgba(90, 103, 216, 0.2),
+            0 0 60px rgba(128, 90, 213, 0.2);
+    transition: box-shadow 0.4s ease-in-out;
+}
+
+.baseStyleImg {
+    max-width: 70px;
+    opacity: 0;
+    will-change: opacity, transform;
+    transform: translateZ(0);
+}
+
+.baseStyleText {
+    opacity: 0;
+    text-align: center;
+    min-height: 5rem;
+    will-change: opacity, transform;
+}
+
+.headerStyle {
+    background: linear-gradient(135deg, #4986d5, #5a67d8, #805ad5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

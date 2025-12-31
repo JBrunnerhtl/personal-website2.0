@@ -1,0 +1,47 @@
+/* greeting.module.css - modern & GPU friendly */
+
+/* Heading base */
+.greetingHeading {
+    /* clamp(min, preferred, max) – größere min für Mobile */
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.05;
+    display: inline-block;
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    text-wrap: balance;
+}
+
+/* each char inline (so staggered animation looks smooth) */
+.charInline {
+    display: inline-block;
+    white-space: pre;
+    will-change: transform, opacity;
+    transform: translateZ(0);
+}
+
+/* Name gradient & visual */
+.nameGradient {
+    background: linear-gradient(135deg, #4986d5, #5a67d8, #805ad5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    margin: 0;
+    line-height: 1.1;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+    .greetingHeading {
+        font-size: 2.4rem; /* größer für Mobile */
+        line-height: 1.15;
+    }
+
+    .nameGradient {
+        font-size: 2.8rem;
+        line-height: 1.2;
+    }
+}

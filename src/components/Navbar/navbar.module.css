@@ -1,0 +1,15 @@
+
+
+.hoverText:hover
+{
+    color: var(--text-color-about);
+    border-color: var(--border-colors-about);
+
+    box-shadow: 0 4px 8px 0 var(--border-colors-about), 0 6px 20px 0 var(--border-colors-about);
+    transition: 0.5s;
+}
+.hoverText
+{
+    transition: 0.5s;
+    min-width: 6rem;
+}
