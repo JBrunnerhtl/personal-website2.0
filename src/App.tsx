@@ -16,10 +16,7 @@ import Email from "./components/Email-Form/Email-form";
 import {Snowfall} from "react-snowfall";
 import "./App.css";
 
-/**
- * Kleine Wrapper-Komponente: mounted children erst wenn `when===true`.
- * So starten alle lifecycle/useEffect/useAnimation in Kindern wirklich erst danach.
- */
+
 function DelayedMount({ when, children }: { when: boolean; children: React.ReactNode }) {
     const [mounted, setMounted] = useState(false);
 
