@@ -13,6 +13,7 @@ import Loader from "./components/Loader/Loader";
 import { ArrowDown } from "lucide-react";
 import ThemeToggle from "./components/Theme/ThemeToggle";
 import Email from "./components/Email-Form/Email-form";
+import {Snowfall} from "react-snowfall";
 import "./App.css";
 
 /**
@@ -84,6 +85,9 @@ export default function App() {
                 )}
 
                 <ThemeToggle />
+                <DelayedMount when={isReady}>
+                    <Snowfall color="#ffffff" speed={[4, 6]} changeFrequency={400}/>
+                </DelayedMount>
 
                 <div className="flex flex-col items-center w-full">
                     <br />
