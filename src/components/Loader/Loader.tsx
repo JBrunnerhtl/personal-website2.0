@@ -52,7 +52,7 @@ export default function Loader() {
                         className="text-sm uppercase
                         text-transparent bg-clip-text bg-gradient-to-r
                         from-[#4986d5] via-[#5a67d8] to-[#805ad5]"
-                        style={{fontFamily: "Arial, sans-serif"}}
+                        style={{fontFamily: "ui-sans-serif, sans-serif"}}
                         transition={{
                             duration: 1.6,
                             repeat: Infinity,

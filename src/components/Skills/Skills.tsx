@@ -6,9 +6,9 @@ import favouritePng from "../../assets/Images/favourite.png"
 function Skills()
 {
     const input =[
-        {url: screenPng, skills: ["TypeScript", "HTML", "CSS", "JavaScript", "React", "Angular", "Avalonia (C#)"], alt: "Frontend"},
-        {url: databasePng ,skills: ["Java", "Node.js", "SQL (Oracle)", "C#", "Rust", "C", "Express"], alt: "Backend"},
-        {url: toolsPng, skills: ["Git", "GitHub", "Jetbrain IDE's", "Podman", "DBeaver", "Ubuntu", "Windows"], alt: "Tools"},
+        {url: screenPng, skills: ["TypeScript", "HTML", "CSS", "JavaScript", "React", "Avalonia (C#)"], alt: "Frontend"},
+        {url: databasePng ,skills: ["Java", "Node.js", "SQL (Oracle)", "C#", "Express", "TypeScript", "JavaScript"], alt: "Backend"},
+        {url: toolsPng, skills: ["Git", "GitHub", "Jetbrain IDE's", "DBeaver", "Linux/Ubuntu", "Windows", "Podman", "Docker"], alt: "Tools"},
         {url: favouritePng, skills: ["React", "TypeScript", "C#", "SQL", "Java"], alt: "Favourites"}
     ]
 
