@@ -114,4 +114,3 @@ This project is licensed under the MIT License. See `LICENSE.txt` for details.
 ## Contact
 
 Maintainer: `JBrunnerhtl` 
-```
