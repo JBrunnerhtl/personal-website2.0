@@ -14,6 +14,7 @@ import { ArrowDown } from "lucide-react";
 import ThemeToggle from "./components/Theme/ThemeToggle";
 import Email from "./components/Email-Form/Email-form";
 import {Snowfall} from "react-snowfall";
+import {Timeline} from "./components/Timeline/Timeline";
 import "./App.css";
 
 
@@ -119,6 +120,15 @@ export default function App() {
 
                     <br />
                     <br />
+
+
+                    <DelayedMount when={isReady}>
+                        <Header input="</> Timeline"/>
+                    </DelayedMount>
+
+                    <DelayedMount when={isReady}>
+                        <Timeline/>
+                    </DelayedMount>
 
                     <DelayedMount when={isReady}>
                         <Header input="</>Skills" />
